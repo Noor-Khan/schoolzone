@@ -1,11 +1,14 @@
 <template>
   <div id="Home">
-    <h2>Hello World!</h2>
+    <slider />
   </div>
 </template>
 
 <script>
+import Slider from "../components/Home/Slider";
 export default {
-  components: {}
+  components: {
+    Slider
+  }
 };
 </script>
