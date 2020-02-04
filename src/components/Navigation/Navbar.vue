@@ -72,75 +72,89 @@
       <!-- Mobile Navbar -->
       <template>
         <v-btn
-          color="primary"
-          tex
-          t
           class="hidden-sm-and-up p0"
           @click.native="mobMenu = true"
           v-if="!mobMenu"
+          style="background:transparent; box-shadow:none;"
         >
-          <v-icon>mdi-menu</v-icon>
+          <v-icon color="white">mdi-menu</v-icon>
         </v-btn>
       </template>
-      <v-card :class="{'open-mob-menu': mobMenu, 'close-mob-menu': !mobMenu}">
-        <v-btn v-if="mobMenu" icon @click.native="mobMenu = false">
+      <v-card
+        :class="{'open-mob-menu': mobMenu, 'close-mob-menu': !mobMenu}"
+        style="background:transparent; box-shadow:none;"
+      >
+        <v-btn
+          v-if="mobMenu"
+          icon
+          @click.native="mobMenu = false"
+          color="white"
+          style="margin-right: 10px;"
+        >
           <v-icon>mdi-close</v-icon>
         </v-btn>
         <v-spacer></v-spacer>
         <div class="mobNav pt-13">
-          <ul class="nav-list left text-uppercase hidden-sm-and-up">
-            <li class="nav-item">
-              <router-link to @click.native="dropdown = !dropdown">Lessons</router-link>
-              <div
-                class="nav-items-dropdown-box lessions"
-                :class="{'open-dropdown': dropdown, 'close-dropdown': !dropdown}"
-              >
-                <ul class="nav-items-dropdown py-5 m-auto">
-                  <li class="nav-item-dropdown">
-                    <router-link to>Sample Lesssons</router-link>
-                  </li>
-                  <li class="nav-item-dropdown">
-                    <router-link to>Say it right</router-link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <router-link to @click.native="dropdown2 = !dropdown2">Tools</router-link>
-              <div
-                class="nav-items-dropdown-box tools"
-                :class="{'open-dropdown': dropdown2, 'close-dropdown': !dropdown2}"
-              >
-                <ul class="nav-items-dropdown py-5 m-auto">
-                  <li class="nav-item-dropdown">
-                    <router-link to>Dictionary</router-link>
-                  </li>
-                  <li class="nav-item-dropdown">
-                    <router-link to>Pronunciation</router-link>
-                  </li>
-                  <li class="nav-item-dropdown">
-                    <router-link to>Blog</router-link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <router-link to @click.native="dropdown3 = !dropdown3">Schoolzone</router-link>
-              <div
-                class="nav-items-dropdown-box schoolzone"
-                :class="{'open-dropdown': dropdown3, 'close-dropdown': !dropdown3}"
-              >
-                <ul class="nav-items-dropdown py-5 m-auto">
-                  <li class="nav-item-dropdown">
-                    <router-link to>What is Schoolzone</router-link>
-                  </li>
-                  <li class="nav-item-dropdown">
-                    <router-link to>How to use Schoolzone</router-link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+          <v-expansion-panels multiple focusable>
+            <v-expansion-panel style="border-radius: 0">
+              <v-expansion-panel-header>
+                <div>Lessons</div>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <router-link to>Sample Lesssons</router-link>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <router-link to>Say it right</router-link>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+
+            <v-expansion-panel style="border-radius: 0" class="mt-0">
+              <v-expansion-panel-header>
+                <div>Tools</div>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <router-link to>Dictionary</router-link>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <router-link to>Pronunciation</router-link>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <router-link to>Blog</router-link>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+
+            <v-expansion-panel style="border-radius: 0" class="mt-0 text-center">
+              <v-expansion-panel-header>
+                <div>Schoolzone</div>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <router-link to>What is Schoolzone</router-link>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <router-link to>How to use Schoolzone</router-link>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel style="border-radius: 0" class="mt-0 text-center">
+              <v-expansion-panel-header>
+                <div>Company</div>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <router-link to>Why Choose Us</router-link>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <router-link to>Contact Us</router-link>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <router-link to>Help</router-link>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel style="border-radius: 0" class="mt-0 text-center">
+              <v-expansion-panel-header>
+                <router-link to style="color:#fff;">Login</router-link>
+              </v-expansion-panel-header>
+            </v-expansion-panel>
+          </v-expansion-panels>
+          <primary-button class="nav-list" text="Get Access" btnClass="access" />
         </div>
       </v-card>
     </v-toolbar>
@@ -172,4 +186,34 @@ export default {
 
 <style lang="scss">
 @import "../../assets/scss/index.scss";
+.theme--light {
+  &.v-expansion-panels {
+    .v-expansion-panel {
+      background-color: transparent !important;
+      &:before {
+        box-shadow: none;
+      }
+      .v-expansion-panel-header {
+        text-align: center;
+        color: #fff !important;
+        .v-expansion-panel-header__icon {
+          display: none;
+        }
+      }
+      .v-expansion-panel-content {
+        cursor: pointer;
+        background-color: #fff;
+        .v-expansion-panel-content__wrap {
+          padding: 10px 0 !important;
+          a {
+            color: #070707;
+          }
+        }
+      }
+    }
+  }
+}
+.v-expansion-panel--active > .v-expansion-panel-header {
+  min-height: 48px !important;
+}
 </style>

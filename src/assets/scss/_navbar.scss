@@ -132,7 +132,8 @@ header {
           visibility: visible;
           opacity: 1;
           transition-duration: .3s;
-          height: 500px;
+          height: 100vh;
+          border-radius: 0;
 
         }
       }
@@ -153,6 +154,15 @@ header {
           list-style-type: none;
           padding: 10px 0;
 
+          &.nav-item {
+            background-color: #fff;
+            border-bottom: 1px solid #efefef;
+
+            a {
+              text-decoration: none;
+            }
+          }
+
           .nav-items-dropdown-box {
 
             &.close-dropdown {
@@ -166,12 +176,11 @@ header {
               visibility: visible;
               height: 100px;
 
-              &:first-child {
-                height: 200px;
+              &.tools {
+                height: 150px;
               }
             }
           }
-
         }
       }
     }
