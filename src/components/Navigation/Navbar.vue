@@ -71,28 +71,21 @@
 
       <!-- Mobile Navbar -->
       <template>
-        <v-btn
-          class="hidden-sm-and-up p0"
-          @click.native="mobMenu = true"
-          v-if="!mobMenu"
-          style="background:transparent; box-shadow:none;"
+        <div
+          id="nav-icon1"
+          @click="burger = !burger"
+          :class="{open: burger}"
+          class="hidden-sm-and-up"
         >
-          <v-icon color="white">mdi-menu</v-icon>
-        </v-btn>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </template>
       <v-card
-        :class="{'open-mob-menu': mobMenu, 'close-mob-menu': !mobMenu}"
+        :class="{'open-mob-menu': burger, 'close-mob-menu': !burger}"
         style="background:transparent; box-shadow:none;"
       >
-        <v-btn
-          v-if="mobMenu"
-          icon
-          @click.native="mobMenu = false"
-          color="white"
-          style="margin-right: 10px;"
-        >
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
         <v-spacer></v-spacer>
         <div class="mobNav pt-13">
           <v-expansion-panels multiple focusable>
@@ -170,6 +163,7 @@ export default {
   data() {
     return {
       navBtn: true,
+      burger: false,
       mobMenu: false,
       dropdown: false,
       dropdown2: false,
@@ -179,6 +173,9 @@ export default {
   methods: {
     navIconChange() {
       this.navBtn = !this.navBtn;
+    },
+    test() {
+      alert(1);
     }
   }
 };
@@ -215,5 +212,79 @@ export default {
 }
 .v-expansion-panel--active > .v-expansion-panel-header {
   min-height: 48px !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Icon 1 */
+
+#nav-icon1 {
+  width: 40px;
+  height: 28px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 12px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 24px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 </style>
