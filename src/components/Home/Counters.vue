@@ -67,6 +67,9 @@ export default {
   background-position: center;
   background-attachment: fixed;
   padding: 50px 0;
+  .container {
+    max-width: 1400px;
+  }
   .counter {
     color: #fff;
     .icon {

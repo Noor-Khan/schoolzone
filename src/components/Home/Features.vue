@@ -42,34 +42,34 @@ export default {
             "ChinesePod SchoolZone can be used by students to help them go over topics addressed in class as well as expand explanations about a particular grammar point."
         },
         {
-          icon: "images/icons/engage.png",
+          icon: "images/icons/calendar.png",
           heading: "Years of experience",
           para:
-            "ChinesePod SchoolZone can be used by students to help them go over topics addressed in class as well as expand explanations about a particular grammar point."
+            "ChinesePod podcasts and videos are recorded by native Chinese teachers with years of teaching Chinese as a second language."
         },
         {
-          icon: "images/icons/engage.png",
+          icon: "images/icons/multi-device.png",
           heading: "Multi device",
           para:
-            "ChinesePod SchoolZone can be used by students to help them go over topics addressed in class as well as expand explanations about a particular grammar point."
+            "The platform is responsive to any device and Operating System to provide a stable and engaging experience across platforms."
         },
         {
-          icon: "images/icons/engage.png",
+          icon: "images/icons/audio.png",
           heading: "Audo lessions",
           para:
-            "ChinesePod SchoolZone can be used by students to help them go over topics addressed in class as well as expand explanations about a particular grammar point."
+            "An integrated player in the SchoolZone main page lets students have a quick preview of the most recent lesson posted by their teacher."
         },
         {
-          icon: "images/icons/engage.png",
+          icon: "images/icons/video.png",
           heading: "Video Lessons",
           para:
-            "ChinesePod SchoolZone can be used by students to help them go over topics addressed in class as well as expand explanations about a particular grammar point."
+            "All the Video Content from ChinesePod are easily accessible for students and teachers using the platform."
         },
         {
-          icon: "images/icons/engage.png",
+          icon: "images/icons/support.png",
           heading: "Dedicated support",
           para:
-            "ChinesePod SchoolZone can be used by students to help them go over topics addressed in class as well as expand explanations about a particular grammar point."
+            "Students and teachers using the platform will have special dedicated support staff to solve any questions or technical issues when they email schoolzone[at]chinesepod.com"
         }
       ]
     };
@@ -79,6 +79,9 @@ export default {
 <style lang="scss" scoped>
 #features {
   padding: 50px 0;
+  .container {
+    max-width: 1400px;
+  }
   .main-heading {
     h2 {
       font-size: 36px;
@@ -89,6 +92,7 @@ export default {
     padding: 10px 15px;
     margin-top: 50px;
     box-shadow: 0px 0px 15px 0px #f0f0f0;
+    height: 42vh;
     .icon {
       position: relative;
       top: -55px;
