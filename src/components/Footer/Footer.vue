@@ -93,6 +93,8 @@ export default {};
   }
   .footer-col {
     color: #fff;
+    padding-right: 20px;
+    padding-bottom: 20px;
     a {
       color: #fff;
       letter-spacing: 0.6px;
