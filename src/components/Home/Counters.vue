@@ -34,10 +34,10 @@ export default {
   data() {
     return {
       counters: [
-        { icon: "", counts: 3650, heading: "lessons" },
-        { icon: "", counts: 578, heading: "students" },
-        { icon: "", counts: 223, heading: "schools" },
-        { icon: "", counts: 60, heading: "teachers" }
+        { icon: "images/icons/books.png", counts: 3650, heading: "lessons" },
+        { icon: "images/icons/students.png", counts: 578, heading: "students" },
+        { icon: "images/icons/schools.png", counts: 223, heading: "schools" },
+        { icon: "images/icons/teachers.png", counts: 60, heading: "teachers" }
       ],
       delay: 3000,
       duration: 5000,
@@ -69,6 +69,11 @@ export default {
   padding: 50px 0;
   .counter {
     color: #fff;
+    .icon {
+      img {
+        width: 90px;
+      }
+    }
     .counts {
       span {
         font-size: 42px;
