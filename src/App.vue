@@ -19,7 +19,7 @@ export default {
   background-color: #fff !important;
 }
 #app {
-  font-family: "Roboto", "Oswald", sans-serif;
+  font-family: "Montserrat", "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
