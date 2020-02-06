@@ -63,7 +63,7 @@
         <v-row>
           <v-col cols="12" md="12">
             <p>
-              <a href="https://chinesepod.com" target="_blank">ChinesePod</a>- All copyrights reserved © 2020
+              <a href="https://chinesepod.com" target="_blank">ChinesePod</a> - All copyrights reserved © 2020
             </p>
           </v-col>
         </v-row>
