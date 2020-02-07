@@ -8,7 +8,7 @@
               <h4>Information</h4>
               <ul>
                 <li>
-                  <a href="#">Contact</a>
+                  <router-link to="/get-access">Contact</router-link>
                 </li>
                 <li>
                   <a href="#">Jobs</a>
@@ -111,6 +111,7 @@ export default {};
       border-radius: 30px;
       padding: 0px 20px;
       width: 100%;
+      font-size: 14px;
       border: 1px solid #cc433b;
       &:focus {
         outline: none;
@@ -121,7 +122,7 @@ export default {};
     }
     .v-btn {
       float: right;
-      padding: 15px 30px;
+      padding: 13px 30px;
       height: unset;
       border-radius: 30px;
       border: 1px solid #cc433b;

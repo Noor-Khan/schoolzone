@@ -86,9 +86,9 @@ export default {
       }
     }
     .seperator {
-      width: 100px;
+      width: 50px;
       margin: 10px 0;
-      border-color: #cc433b;
+      border: 1px solid #cc433b;
     }
   }
 }
@@ -97,21 +97,23 @@ export default {
 .v-image__image--cover {
   background-attachment: fixed;
 }
-.v-responsive__content {
-  display: flex !important;
-  background-color: rgba(0, 0, 0, 0.44);
-  &:after {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: white;
-    right: 0;
-    left: 0;
-    bottom: -5rem;
-    transform: rotate(45deg);
-    text-align: center;
-    margin: auto;
+#homeSlider {
+  .v-responsive__content {
+    display: flex !important;
+    background-color: rgba(0, 0, 0, 0.44);
+    &:after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      background: white;
+      height: 150px;
+      right: 0;
+      left: 0;
+      bottom: -5rem;
+      transform: rotate(45deg);
+      text-align: center;
+      margin: auto;
+    }
   }
 }
 .v-window__prev,

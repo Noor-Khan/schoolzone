@@ -9,6 +9,7 @@
             </div>
             <div class="heading">
               <h4>Student-Focused</h4>
+              <hr class="seperator" />
             </div>
             <div class="para">
               <p>With the use of ChinesePod SchoolZone, students can focus on the lessons that will help them to improve faster according to their level of expertise. Students can bring questions to the classroom and get feedback from their teacher.</p>
@@ -22,6 +23,7 @@
             </div>
             <div class="heading">
               <h4>Tech For Teachers</h4>
+              <hr class="seperator" />
             </div>
             <div class="para">
               <p>Teachers can save time on lesson preparation and help their students advance by focusing on specific learning challenges. When doing homework or studying for upcoming tests, ChinesePod SchoolZone is a great way to keep students engaged in their learning.</p>
@@ -35,6 +37,7 @@
             </div>
             <div class="heading">
               <h4>Challenging Classrooms</h4>
+              <hr class="seperator" />
             </div>
             <div class="para">
               <p>Teachers can easily divide their students between classrooms and levels so it’s easier to give them challenging lessons according to their levels.</p>
@@ -58,6 +61,7 @@
         <v-col cols="12" md="4" class="text-left">
           <div class="video-heading">
             <h3>What is ChinesePod SchoolZone ?</h3>
+            <hr class="seperator" />
           </div>
           <div class="video-para">
             <p>
@@ -110,9 +114,13 @@ export default {};
     .heading {
       margin: 10px 0;
       h4 {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 22px;
+        // font-weight: 600;
         text-transform: uppercase;
+      }
+      .seperator {
+        width: 50px;
+        border: 1px solid #cc433b;
       }
     }
     .para {
@@ -148,6 +156,11 @@ export default {};
     margin-bottom: 2rem;
     h3 {
       font-size: 42px;
+    }
+    .seperator {
+      width: 50px;
+      margin: 10px 0;
+      border: 1px solid #cc433b;
     }
   }
   .video-para {

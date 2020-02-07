@@ -54,7 +54,8 @@ header {
                   align-items: center;
                   flex: 1;
                   justify-content: center;
-                  height: 50px;
+                  height: 0;
+                  opacity: 0;
 
                   &:first-child {
                     border-right: 1px solid gray;
@@ -86,6 +87,15 @@ header {
                 visibility: visible;
                 height: 92px;
 
+                .nav-items-dropdown {
+                  width: 750px;
+                  margin: auto;
+
+                  .nav-item-dropdown {
+                    height: 50px;
+                    opacity: 1;
+                  }
+                }
               }
 
               a {

@@ -1,18 +1,17 @@
 <template>
   <v-btn
     v-if="btnClass === 'access'"
-    :href="link"
-    :color="btnClass"
+    color="success"
     :rounded="true"
-    class="px-6 py-6"
+    :to="link"
+    class="px-8 py-4"
     :class="`btn-${btnClass}`"
     style="text-decoration:none;"
   >{{ text }}</v-btn>
   <v-btn
-    :disabled="disabled"
     v-else
     :href="link"
-    :color="btnClass"
+    color="success"
     :rounded="true"
     class="px-12 py-7"
     :class="`btn-${btnClass}`"
@@ -41,18 +40,24 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .btn-access {
   font-size: 14px !important;
-  background-color: #00b233 !important;
   color: #fff !important;
   font-weight: 600;
+  width: 180px;
+  height: unset !important;
   text-transform: capitalize;
-  border: 1px solid #00b233;
   &:hover {
-    background-color: #fff !important;
-    color: #00b233 !important;
-    border: 1px solid #00b233;
+    background-color: transparent !important;
+    color: #fff !important;
   }
+}
+.btn-submit {
+  border-radius: 30px;
+  padding: 16px 40px;
+  margin: 5px;
+  font-size: 16px;
+  height: unset;
 }
 </style>

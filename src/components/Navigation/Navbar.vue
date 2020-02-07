@@ -2,8 +2,10 @@
   <div id="header">
     <v-toolbar>
       <!-- Website Brand -->
-      <v-toolbar-title>
-        <v-img src="../../assets/logo.svg" style="width: 160px;" alt />
+      <v-toolbar-title style="overflow:visible;">
+        <router-link to="/">
+          <img src="../../assets/logo.svg" style="width: 200px;" alt />
+        </router-link>
       </v-toolbar-title>
       <!-- Desktop Navbar -->
       <div class="desktopNav hidden-sm-and-down ml-5 width-100">
@@ -63,10 +65,15 @@
             <router-link to>Company</router-link>
           </li>
           <li class="nav-item">
-            <router-link to>Login</router-link>
+            <router-link to="/login">Login</router-link>
           </li>
         </ul>
-        <primary-button class="nav-list hidden-sm-and-down" text="Get Access" btnClass="access" />
+        <primary-button
+          class="nav-list hidden-sm-and-down"
+          text="Get Access"
+          btnClass="access"
+          link="/get-access"
+        />
       </div>
 
       <!-- Mobile Navbar -->
@@ -147,7 +154,7 @@
               </v-expansion-panel-header>
             </v-expansion-panel>
           </v-expansion-panels>
-          <primary-button class="nav-list" text="Get Access" btnClass="access" />
+          <primary-button class="nav-list" text="Get Access" btnClass="access" link="/get-access" />
         </div>
       </v-card>
     </v-toolbar>

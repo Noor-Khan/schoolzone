@@ -20,3 +20,8 @@ a {
     color: $color-primary;
     text-decoration: none;
 }
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

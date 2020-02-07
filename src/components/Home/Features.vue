@@ -17,7 +17,7 @@
             <div class="icon">
               <img :src="service.icon" alt />
             </div>
-            <div class="heading">
+            <div class="heading text-uppercase">
               <h4>{{service.heading}}</h4>
             </div>
             <hr class="seperator" />
@@ -112,11 +112,14 @@ export default {
     }
     .heading {
       margin: 10px 0;
+      h4 {
+        font-size: 22px;
+      }
     }
     .seperator {
-      width: 100px;
+      width: 50px;
       margin: auto;
-      border-color: #cc433b;
+      border: 1px solid #cc433b;
     }
     .para {
       margin: 10px 0;
