@@ -30,6 +30,11 @@
   }
   .header-logo {
     position: relative;
+    @media (max-width: 580px) {
+      img {
+        width: 70%;
+      }
+    }
   }
   &:after {
     content: "";

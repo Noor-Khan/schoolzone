@@ -2,13 +2,7 @@
   <section id="homeSlider">
     <template>
       <v-carousel hide-delimiters height="100vh">
-        <v-carousel-item
-          v-for="(slide,i) in slides"
-          :key="i"
-          :src="slide.src"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
-        >
+        <v-carousel-item v-for="(slide,i) in slides" :key="i" :src="slide.src">
           <v-container class="align-center d-flex">
             <v-row class>
               <v-col cols="12" md="10" lg="10" xl="6" offset-xl="1">
@@ -104,8 +98,8 @@ export default {
     &:after {
       content: "";
       position: absolute;
-      width: 150px;
       background: white;
+      width: 150px;
       height: 150px;
       right: 0;
       left: 0;
@@ -113,6 +107,10 @@ export default {
       transform: rotate(45deg);
       text-align: center;
       margin: auto;
+      @media (max-width: 580px) {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }
@@ -121,10 +119,18 @@ export default {
   margin: 0 20px;
   transform: rotate(45deg);
   border-radius: 0;
+  @media (max-width: 580px) {
+    top: unset !important;
+    bottom: calc(10% - 20px);
+  }
   button {
     transform: rotate(-45deg);
-    width: 70px !important;
-    height: 70px !important;
+    width: 60px !important;
+    height: 60px !important;
+    @media (max-width: 580px) {
+      width: 45px !important;
+      height: 45px !important;
+    }
     span {
       i {
         font-size: 36px !important;

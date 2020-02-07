@@ -18,9 +18,76 @@ header {
       margin-bottom: 0;
 
       .nav-list {
+        position: relative;
         display: flex;
         flex-direction: row;
         list-style-type: none;
+
+        .nav-item {
+          &.company {
+
+            &:hover {
+              .company-dropdown {
+                opacity: 1;
+                visibility: visible;
+                height: 150px;
+
+                li {
+                  position: relative;
+                  z-index: 1;
+                  opacity: 1;
+
+                  &:hover {
+                    background-color: $color-primary;
+                    cursor: pointer;
+
+                    a {
+                      color: $color-white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .company-dropdown {
+          transition-duration: 0.3s;
+          position: absolute;
+          background-color: #fff;
+          height: 0;
+          right: 3rem;
+          top: 44px;
+          width: 220px;
+          opacity: 0;
+          padding-left: 0;
+          visibility: hidden;
+          list-style-type: none;
+          // padding: 10px 5px;
+
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            top: -10px;
+            right: 50px;
+            transform: rotate(45deg);
+          }
+
+          li {
+            text-align: left;
+            opacity: 0;
+            padding: 5px;
+            line-height: 40px;
+
+            a {
+              color: $color-primary;
+            }
+          }
+        }
 
         &.left {
           padding-left: 0;

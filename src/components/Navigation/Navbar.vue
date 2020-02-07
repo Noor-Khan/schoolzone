@@ -2,7 +2,7 @@
   <div id="header">
     <v-toolbar>
       <!-- Website Brand -->
-      <v-toolbar-title style="overflow:visible;">
+      <v-toolbar-title style="overflow:visible;" class="text-left">
         <router-link to="/">
           <img src="../../assets/logo.svg" style="width: 200px;" alt />
         </router-link>
@@ -61,8 +61,19 @@
         </ul>
         <v-spacer></v-spacer>
         <ul class="nav-list right hidden-sm-and-down">
-          <li class="nav-item">
+          <li class="nav-item company">
             <router-link to>Company</router-link>
+            <ul class="company-dropdown">
+              <li>
+                <router-link to>Why Choose Us</router-link>
+              </li>
+              <li>
+                <router-link to>Contact Us</router-link>
+              </li>
+              <li>
+                <router-link to>Help</router-link>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <router-link to="/login">Login</router-link>
@@ -150,7 +161,7 @@
             </v-expansion-panel>
             <v-expansion-panel style="border-radius: 0" class="mt-0 text-center">
               <v-expansion-panel-header>
-                <router-link to style="color:#fff;">Login</router-link>
+                <router-link to="/login" style="color:#fff;">Login</router-link>
               </v-expansion-panel-header>
             </v-expansion-panel>
           </v-expansion-panels>
