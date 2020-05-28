@@ -1,11 +1,23 @@
 <template>
   <div id="Home">
-    <h2>Hello World!</h2>
+    <slider />
+    <services />
+    <counters />
+    <features />
   </div>
 </template>
 
 <script>
+import Slider from "../components/Home/Slider";
+import Services from "../components/Home/Services";
+import Counters from "../components/Home/Counters";
+import Features from "../components/Home/Features";
 export default {
-  components: {}
+  components: {
+    Slider,
+    Services,
+    Counters,
+    Features
+  }
 };
 </script>

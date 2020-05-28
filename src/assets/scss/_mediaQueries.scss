@@ -1,0 +1,23 @@
+@media(max-width: 580px) {
+  h2 {
+    font-size: 36px !important;
+  }
+
+  h3 {
+    font-size: 26px !important;
+  }
+
+  h4 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  header {
+    .v-toolbar__content {
+      padding: 8px 16px !important;
+    }
+  }
+}

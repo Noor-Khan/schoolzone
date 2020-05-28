@@ -19,7 +19,7 @@ export default {
   background-color: #fff !important;
 }
 #app {
-  font-family: "Nunito Sans", "Roboto", sans-serif;
+  font-family: "Open Sans", "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
